@@ -17,4 +17,422 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  padding-block-start: 102px;
+  color: var(--accent-clr);
+  font-family: var(--main-font), sans-serif;
+  background-color: var(--background-clr);
+  background-image: var(--background-image);
+  background-size: cover;
+  background-attachment: fixed;
+  font-size: 18px;
+}
+
+@supports (font-variation-settings: normal) {
+  .page {
+    font-family: "Inter-Variable", sans-serif;
+    font-size: var(--font-size);
+  }
+}
+
+/* ШАПКА */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(698px, 99%);
+  padding: 136px 0px 15px 0px;
+  background-color: var(--background-clr);
+  margin: 0 auto 100px;
+  font-family: var(--accent-font, fantasy);
+  color: var(--accent-color);
+  border: 2px solid var(--accent-clr);
+}
+
+.header__logo {
+  font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
+  margin-block-end: 20px;
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+.header__title {
+  text-transform: uppercase;
+  margin-block-end: 22px;
+  font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
+}
+/* кнопки тем */
+.theme-menu__button {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  margin-block-end: 8px;
+  margin-inline-start: 15px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+/* hover */
+.theme-menu__button:disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+/* before  ▶*/
+.theme-menu__button:before {
+  content: "▶";
+  font-size: 14px;
+  position: absolute;
+  left: -18px;
+  color: transparent;
+  animation: pulse 1s infinite ease-in-out;
+}
+
+.theme-menu__button:disabled:before {
+  color: var(--accent-clr);
+  opacity: 0.6;
+}
+
+/* after focus подчёркивание */
+.theme-menu__button::after {
+  content: "";
+  display: block;
+  position: relative;
+  block-size: 2px;
+  background-color: var(--accent-clr);
+  opacity: 0.6;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible::after {
+  color: var(--accent-clr);
+  transform: scaleX(1);
+}
+
+/* MAIN  */
+/* карточки */
+.card {
+  inline-size: min(696px, 99%);
+  background-color: var(--background-clr);
+  margin: 0 auto 50px auto;
+  border: 2px solid var(--accent-clr);
+}
+
+.card__title {
+  padding: 3px 10px;
+  font-size: 18px;
+  border-block-end: 2px solid var(--accent-clr);
+}
+/* Секция изображение */
+.card___img_section {
+  position: relative;
+}
+/* Лейбл на изображении */
+.card__img_label {
+  font-family: var(--accent-font, fantasy);
+  font-size: 14px;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  z-index: 10;
+}
+
+@supports (
+  (text-stroke: 1px var(--label-line-clr)) or
+    (-webkit-text-stroke: 1px var(--label-line-clr))
+) {
+  .card__img_label {
+    -webkit-text-stroke: 1px var(--label-line-clr);
+    text-shadow: none;
+  }
+}
+/* изображение */
+.card__image {
+  inline-size: 100%;
+  display: block;
+}
+/* Фильтры */
+.img-2 {
+  filter: saturate(60%);
+}
+
+.img-3 {
+  filter: hue-rotate(35deg);
+}
+
+.img-4 {
+  filter: sepia(100%);
+}
+
+.img-5 {
+  filter: grayscale(1);
+}
+.img-6 {
+  filter: sepia(100%) contrast(70%);
+}
+.img-7 {
+  filter: blur(3px);
+}
+
+.img-8 {
+  filter: brightness(90%) saturate(60%) hue-rotate(-50deg);
+}
+/* Текст под изображением */
+.border__text {
+  border-block-start: 2px solid var(--accent-clr);
+  font-size: 18px;
+}
+.card__text {
+  margin: 25px;
+}
+/* Кнопки в карточках */
+.buttons__section {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: 0px 25px 25px 0px;
+}
+/* Сердечко */
+.card__icon-button {
+  display: flex;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  height: 38px;
+  border: 2px solid transparent;
+  align-items: center;
+  transition: border 0.3s ease;
+  margin-inline-end: 4px;
+}
+/* Фокус на сердечке */
+.card__icon-button:focus {
+  outline: none;
+}
+.card__icon-button:focus-visible {
+  border-color: var(--accent-clr);
+}
+/* Искры */
+.sparks {
+  fill: var(--heart-fill-clr);
+  opacity: 0;
+}
+/* сердцевина */
+.core {
+  fill: transparent;
+  transition: fill 0.3s linear 0.03s;
+}
+/* контур */
+.contour {
+  transition-duration: 0.1s;
+}
+/* основное тело */
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+/* hover на сердечке */
+.card__icon-button:hover .main-body {
+  fill: var(--accent-clr);
+  transition: fill 0.3s linear 0.05s;
+}
+.card__icon-button:hover .core {
+  fill: var(--accent-clr);
+  transition: fill 0.3s linear;
+}
+
+/* active на сердечке */
+.card__icon-button:active .main-body {
+  fill: var(--heart-fill-clr);
+  transition: fill 0.3s linear 0.05s;
+}
+.card__icon-button:active .core {
+  fill: var(--heart-fill-clr);
+  transition: fill 0.3s linear;
+}
+
+/* Анимация при клике на сердечко */
+.like-icon.is-liked .core {
+  fill: var(--heart-fill-clr);
+  transition: 0.03s;
+}
+.like-icon.is-liked .main-body {
+  fill: var(--heart-fill-clr);
+  transition: 0.3s 0.05s;
+}
+.like-icon.is-liked .contour {
+  fill: var(--heart-fill-clr);
+  transition: 0.3s 0.06s;
+}
+.like-icon.is-liked .sparks {
+  /* Имя, задержка, ф-ция, длительность */
+  animation: heart-sparks 0.3s ease-in 0.3s;
+}
+.is-liked .heart {
+  transform-origin: center;
+  /* Имя, длительность, ф-ция, задержка, повтор анимации */
+  animation: heart-scale 0.3s ease-in 0.1s alternate;
+}
+
+/* Кнопка Like */
+.section__modal-button,
+.card__like-button {
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  inline-size: 130px;
+  block-size: 38px;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--accent-font, fantasy);
+  border: 2px solid var(--accent-clr);
+  background-color: transparent;
+  font-size: 14px;
+}
+/* Анимации заливки кнопок */
+.section__modal-button:before,
+.save__button:before,
+.card__like-button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  inline-size: 0;
+  block-size: 100%;
+  background-color: var(--accent-clr);
+  transition: 0.5s ease-in-out;
+}
+
+.section__modal-button:hover:before,
+.save__button:hover:before,
+.card__like-button:hover:before {
+  inline-size: 100%;
+}
+
+.section__modal-button:focus,
+.card__like-button:focus,
+.save__button:focus {
+  outline: none;
+}
+
+.section__modal-button:focus-visible,
+.card__like-button:focus-visible,
+.save__button:focus-visible {
+  box-shadow: 2px 2px 0 0 var(--accent-clr);
+  transition-duration: 0.3s;
+}
+/* текст для конопок */
+.button__text {
+  mix-blend-mode: difference;
+  color: var(--button-text-clr);
+}
+/* Кнопка сохранение */
+.save__button {
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  margin: 0 auto 80px;
+  inline-size: 340px;
+  block-size: 55px;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--accent-font, fantasy);
+  border: 2px solid var(--accent-clr);
+  font-size: 14px;
+  line-height: 90%;
+  background-color: var(--background-clr);
+  transition: all 0.5s;
+}
+/* Дискет к кнопке */
+.floppy__image {
+  inline-size: 21px;
+  block-size: 21px;
+  margin-inline-end: 8px;
+  stroke: var(--button-text-clr);
+  mix-blend-mode: difference;
+  z-index: 10;
+}
+/* всплывающие окно */
+.modal {
+  inline-size: 357px;
+  background-color: var(--background-clr);
+  font-family: var(--accent-font, fantasy);
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 32px 42px 32px;
+  border: 2px solid var(--accent-clr);
+}
+
+.section__modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__modal-text {
+  display: block;
+  margin-inline-start: 20px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: var(--accent-clr);
+}
+
+.section__modal-floppy__image {
+  z-index: 10;
+  inline-size: 39px;
+  block-size: 39px;
+  flex-shrink: 0;
+}
+
+.section__modal-button {
+  inline-size: 257px;
+  block-size: 38px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.8);
+}
+
+/* медиазапрос */
+@media (width <= 375px) {
+  .header {
+    padding-block-start: 120px;
+  }
+
+  .header__logo {
+    font-size: 49px;
+  }
+
+  .header__title {
+    font-size: 14px;
+  }
+
+  .save__button {
+    flex-direction: column;
+    inline-size: 306px;
+    block-size: 84px;
+    padding: 15px 0;
+    justify-content: space-between;
+  }
+
+  .floppy__image {
+    inline-size: 28px;
+    block-size: 28px;
+    margin-bottom: 8px;
+  }
 }
