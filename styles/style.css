@@ -39,7 +39,7 @@
   padding: 136px 0px 15px 0px;
   background-color: var(--background-clr);
   margin: 0 auto 100px;
-  font-family: var(--accent-font, fantasy);
+  font-family: var(--accent-font), fantasy;
   color: var(--accent-color);
   border: 2px solid var(--accent-clr);
 }
@@ -135,7 +135,7 @@
 }
 /* Лейбл на изображении */
 .card__img_label {
-  font-family: var(--accent-font, fantasy);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   position: absolute;
   right: 25px;
@@ -160,29 +160,29 @@
   display: block;
 }
 /* Фильтры */
-.img-2 {
+.img-saturate{
   filter: saturate(60%);
 }
 
-.img-3 {
+.img-hue-rotate{
   filter: hue-rotate(35deg);
 }
 
-.img-4 {
+.img-sepia{
   filter: sepia(100%);
 }
 
-.img-5 {
+.img-grayscale{
   filter: grayscale(1);
 }
-.img-6 {
+.img-sepia-contrast {
   filter: sepia(100%) contrast(70%);
 }
-.img-7 {
+.img-blur {
   filter: blur(3px);
 }
 
-.img-8 {
+.img-filter-comb{
   filter: brightness(90%) saturate(60%) hue-rotate(-50deg);
 }
 /* Текст под изображением */
@@ -191,6 +191,8 @@
   font-size: 18px;
 }
 .card__text {
+  line-height: 21px;
+  font-variation-settings:'wght' var(---card-font-weight), 'wdth' 100, 'opsz' 0;
   margin: 25px;
 }
 /* Кнопки в карточках */
@@ -292,7 +294,7 @@
   position: relative;
   inline-size: 130px;
   block-size: 38px;
-  font-family: var(--accent-font, fantasy);
+  font-family: var(--accent-font), fantasy;
   border: 2px solid var(--accent-clr);
   background-color: transparent;
   font-size: 14px;
@@ -344,7 +346,7 @@
   margin: 0 auto 80px;
   inline-size: 340px;
   block-size: 55px;
-  font-family: var(--accent-font, fantasy);
+  font-family: var(--accent-font), fantasy;
   border: 2px solid var(--accent-clr);
   font-size: 14px;
   background-color: var(--background-clr);
@@ -363,7 +365,7 @@
 .modal {
   inline-size: 357px;
   background-color: var(--background-clr);
-  font-family: var(--accent-font, fantasy);
+  font-family: var(--accent-font), fantasy;
   text-transform: uppercase;
   font-size: 14px;
   padding: 32px 42px 32px;
