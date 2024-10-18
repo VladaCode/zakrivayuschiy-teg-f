@@ -2,7 +2,7 @@
 :root {
   --main-font: "Inter-Variable";
   --accent-font: "PressStart2P-Regular";
-  --main-font-card-weight: 400;
+  ---font-weight: 400;
   --accent-clr: #000;
   --background-clr: #fff;
   --label-line-clr: #fff;

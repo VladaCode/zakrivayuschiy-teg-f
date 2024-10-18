@@ -20,7 +20,7 @@
   padding-block-start: 102px;
   color: var(--accent-clr);
   font-family: var(--main-font), sans-serif;
-  font-variation-settings: "wgth" var(--main-font-card-weight);
+  font-variation-settings: 'wgth' var(--font-weight), 'wdth' 0, 'opsz' 0;
   font-size: 18px;
   background-color: var(--background-clr);
   background-image: var(--background-image);
@@ -28,12 +28,6 @@
   background-attachment: fixed;
 }
 
-@supports (font-variation-settings: normal) {
-  .page {
-    font-family: "Inter-Variable", sans-serif;
-    font-size: var(--font-size);
-  }
-}
 
 /* ШАПКА */
 .header {
