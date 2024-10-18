@@ -25,9 +25,8 @@
   background-image: var(--background-image);
   background-size: cover;
   background-attachment: fixed;
-  font-variation-settings:'wght' var(--font-weight), 'wdth' 100, 'opsz' 0;
+  font-variation-settings: "wght" var(--font-weight), "wdth" 100, "opsz" 0;
 }
-
 
 /* ШАПКА */
 .header {
@@ -160,19 +159,19 @@
   display: block;
 }
 /* Фильтры */
-.img-saturate{
+.img-saturate {
   filter: saturate(60%);
 }
 
-.img-hue-rotate{
+.img-hue-rotate {
   filter: hue-rotate(35deg);
 }
 
-.img-sepia{
+.img-sepia {
   filter: sepia(100%);
 }
 
-.img-grayscale{
+.img-grayscale {
   filter: grayscale(1);
 }
 .img-sepia-contrast {
@@ -182,7 +181,7 @@
   filter: blur(3px);
 }
 
-.img-filter-comb{
+.img-filter-comb {
   filter: brightness(90%) saturate(60%) hue-rotate(-50deg);
 }
 /* Текст под изображением */
@@ -192,7 +191,7 @@
 }
 .card__text {
   line-height: 21px;
-  font-variation-settings:'wght' var(---card-font-weight), 'wdth' 100, 'opsz' 0;
+  font-variation-settings: "wght" var(---card-font-weight), "wdth" 100, "opsz" 0;
   margin: 25px;
 }
 /* Кнопки в карточках */
