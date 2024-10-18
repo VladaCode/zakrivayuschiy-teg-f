@@ -20,12 +20,12 @@
   padding-block-start: 102px;
   color: var(--accent-clr);
   font-family: var(--main-font), sans-serif;
-  font-variation-settings: 'wgth' var(--main-font-card-weight);                                                                                                 
+  font-variation-settings: "wgth" var(--main-font-card-weight);
   font-size: 18px;
   background-color: var(--background-clr);
   background-image: var(--background-image);
   background-size: cover;
-  background-attachment: fixed;   
+  background-attachment: fixed;
 }
 
 @supports (font-variation-settings: normal) {
@@ -436,4 +436,3 @@ dialog::backdrop {
     margin-bottom: 8px;
   }
 }
-
