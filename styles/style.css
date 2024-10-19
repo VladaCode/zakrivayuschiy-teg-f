@@ -25,7 +25,7 @@
   background-image: var(--background-image);
   background-size: cover;
   background-attachment: fixed;
-  font-variation-settings: "wght" var(--font-weight), "wdth" 100, "opsz" 0;
+  font-variation-settings: "wght" var(--card-font-weight), "wdth" 100, "opsz" 0;
 }
 
 /* ШАПКА */
@@ -127,6 +127,7 @@
   padding: 3px 10px;
   font-size: 18px;
   border-block-end: 2px solid var(--accent-clr);
+  font-variation-settings: "wght" var(--card-title-font-weight), "wdth" 100, "opsz" 0;
 }
 /* Секция изображение */
 .card___img_section {
@@ -191,7 +192,7 @@
 }
 .card__text {
   line-height: 21px;
-  font-variation-settings: "wght" var(---card-font-weight), "wdth" 100, "opsz" 0;
+  font-variation-settings: "wght" var(--card-font-weight), "wdth" 100, "opsz" 0;
   margin: 25px;
 }
 /* Кнопки в карточках */

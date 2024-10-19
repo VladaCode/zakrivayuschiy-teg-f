@@ -5,8 +5,8 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 :root.theme-light {
-  ---font-weight: 700;
-  ---card-font-weight: 400;
+  --card-title-font-weight: 700;
+  --card-font-weight: 400;
   --background-image: repeating-linear-gradient(
       to right,
       #d3d3d3 0 2px,
@@ -25,8 +25,8 @@
 }
 
 :root.theme-dark {
---font-weight: 785;
----card-font-weight: 465;
+  --card-title-font-weight: 785;
+  --card-font-weight: 465;
   --background-image: repeating-linear-gradient(
       to right,
       #000 0 2px,
@@ -42,8 +42,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --font-weight: 785;
-    ---card-font-weight: 465;
+    --card-title-font-weight: 785;
+    --card-font-weight: 465;
     --background-image: repeating-linear-gradient(
         to right,
         #000 0 2px,
@@ -60,8 +60,8 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    ---font-weight: 700;
-    ---card-font-weight: 400;
+    --card-title-font-weight: 700;
+    --card-font-weight: 400;
     --background-image: repeating-linear-gradient(
         to right,
         #d3d3d3 0 2px,

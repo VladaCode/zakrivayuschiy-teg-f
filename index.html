@@ -580,35 +580,37 @@
           </div>
         </li>
       </ul>
+
+      <section>
+        <button
+          class="save__button"
+          onclick="window['dialog-id'].showModal();"
+          aria-controls="dialog-id"
+          type="button"
+        >
+          <svg class="floppy__image" viewBox="0 0 20 20">
+            <use href="./svg/floppy.svg#floppy"></use>
+          </svg>
+          <span class="button__text">Сохранить на память</span>
+        </button>
+      </section>
+  
+      <dialog class="modal" id="dialog-id">
+        <div class="section__modal">
+          <svg class="section__modal-floppy__image" viewBox="0 0 20 20">
+            <use href="svg/floppy.svg#floppy" />
+          </svg>
+          <p class="section__modal-text">Вставьте дискету, чтобы продолжить</p>
+        </div>
+        <form method="dialog">
+          <button class="section__modal-button">
+            <span class="button__text">ОК</span>
+          </button>
+        </form>
+      </dialog>
     </main>
 
-    <section>
-      <button
-        class="save__button"
-        onclick="window['dialog-id'].showModal();"
-        aria-controls="dialog-id"
-        type="button"
-      >
-        <svg class="floppy__image" viewBox="0 0 20 20">
-          <use href="./svg/floppy.svg#floppy"></use>
-        </svg>
-        <span class="button__text">Сохранить на память</span>
-      </button>
-    </section>
 
-    <dialog class="modal" id="dialog-id">
-      <div class="section__modal">
-        <svg class="section__modal-floppy__image" viewBox="0 0 20 20">
-          <use href="svg/floppy.svg#floppy" />
-        </svg>
-        <p class="section__modal-text">Вставьте дискету, чтобы продолжить</p>
-      </div>
-      <form method="dialog">
-        <button class="section__modal-button">
-          <span class="button__text">ОК</span>
-        </button>
-      </form>
-    </dialog>
 
     <script src="./scripts/like.js"></script>
   </body>
